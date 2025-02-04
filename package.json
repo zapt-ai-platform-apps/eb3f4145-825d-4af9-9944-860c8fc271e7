@@ -1,7 +1,7 @@
 {
   "name": "the-riders-experience",
   "version": "1.0.0",
-  "description": "An interactive road trip adventure experience powered by creativity and teamwork.",
+  "description": "An interactive racing championship experience where speed, strategy, and precision lead to glory.",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@sentry/browser": "^8.41.0",
+    "@zapt/zapt-js": "^1.0.11",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

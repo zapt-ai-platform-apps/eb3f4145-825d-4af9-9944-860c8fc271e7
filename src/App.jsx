@@ -4,38 +4,38 @@ import initialRoles from './data/roles';
 import GameContent from './components/Game';
 
 export default function App() {
-  const [adventureStarted, setAdventureStarted] = useState(false);
+  const [raceStarted, setRaceStarted] = useState(false);
   const [roles, setRoles] = useState(initialRoles);
   const [buttonLoading, setButtonLoading] = useState(false);
 
-  const handleStartAdventure = async () => {
+  const handleStartRace = async () => {
     if (buttonLoading) return;
     setButtonLoading(true);
     try {
-      console.log('Starting adventure...');
+      console.log('Starting race...');
       await new Promise(resolve => setTimeout(resolve, 500));
-      setAdventureStarted(true);
-      console.log('Adventure started');
+      setRaceStarted(true);
+      console.log('Race started');
     } catch (error) {
-      console.error('Error starting adventure:', error);
+      console.error('Error starting race:', error);
       Sentry.captureException(error);
     } finally {
       setButtonLoading(false);
     }
   };
 
-  const handleRotateRoles = async () => {
+  const handleNextRace = async () => {
     if (buttonLoading) return;
     setButtonLoading(true);
     try {
-      console.log('Rotating roles...');
+      console.log('Preparing next race...');
       setRoles(prevRoles => {
         const [first, ...rest] = prevRoles;
         return [...rest, first];
       });
-      console.log('Roles rotated. New order:', roles.map(r => r.name));
+      console.log('Role sequence updated. New order:', roles.map(r => r.name));
     } catch (error) {
-      console.error('Error rotating roles:', error);
+      console.error('Error updating roles:', error);
       Sentry.captureException(error);
     } finally {
       setButtonLoading(false);
@@ -46,15 +46,15 @@ export default function App() {
     <div className="min-h-screen h-full bg-gradient-to-r from-blue-500 to-purple-600 text-gray-100 flex flex-col items-center p-6">
       <header className="w-full text-center mb-8">
         <h1 className="text-4xl font-bold">the rider's experience</h1>
-        <p className="mt-2 text-lg">Embark on a thrilling road trip adventure!</p>
+        <p className="mt-2 text-lg">Race through breathtaking tracks in the ultimate championship!</p>
       </header>
 
       <GameContent
-        adventureStarted={adventureStarted}
+        raceStarted={raceStarted}
         roles={roles}
         buttonLoading={buttonLoading}
-        onStartAdventure={handleStartAdventure}
-        onRotateRoles={handleRotateRoles}
+        onStartRace={handleStartRace}
+        onNextRace={handleNextRace}
       />
 
       <footer className="w-full mt-auto py-4 text-center">
