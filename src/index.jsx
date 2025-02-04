@@ -18,12 +18,12 @@ Sentry.init({
 // Add PWA support
 window.progressierAppRuntimeSettings = {
   uid: import.meta.env.VITE_PUBLIC_APP_ID,
-  icon512: "https://supabase.zapt.ai/storage/v1/render/image/public/icons/c7bd5333-787f-461f-ae9b-22acbc0ed4b0/55145115-0624-472f-96b9-d5d88aae355f.png?width=512&height=512",
-  name: 'New App',
-  shortName: 'New App',
+  icon512: "https://supabase.zapt.ai/storage/v1/render/image/public/icons/eb3f4145-825d-4af9-9944-860c8fc271e7/8b2d36fa-a1d9-4d72-b708-c77065907ddf.png?width=512&amp;height=512",
+  name: "the rider's experience",
+  shortName: "the rider's"
 };
 
-let progressierScript = document.createElement('script');
+const progressierScript = document.createElement('script');
 progressierScript.setAttribute('src', 'https://progressier.app/z8yY3IKmfpDIw3mSncPh/script.js');
 progressierScript.setAttribute('defer', 'true');
 document.querySelector('head').appendChild(progressierScript);
