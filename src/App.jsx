@@ -13,6 +13,7 @@ export default function App() {
     setButtonLoading(true);
     try {
       console.log('Starting race...');
+      // Simulate API call delay
       await new Promise(resolve => setTimeout(resolve, 500));
       setRaceStarted(true);
       console.log('Race started');
@@ -31,9 +32,10 @@ export default function App() {
       console.log('Preparing next race...');
       setRoles(prevRoles => {
         const [first, ...rest] = prevRoles;
-        return [...rest, first];
+        const newRoles = [...rest, first];
+        console.log('Role sequence updated. New order:', newRoles.map(r => r.name));
+        return newRoles;
       });
-      console.log('Role sequence updated. New order:', roles.map(r => r.name));
     } catch (error) {
       console.error('Error updating roles:', error);
       Sentry.captureException(error);
@@ -44,9 +46,9 @@ export default function App() {
 
   return (
     <div className="min-h-screen h-full bg-gradient-to-r from-blue-500 to-purple-600 text-gray-100 flex flex-col items-center p-6">
-      <header className="w-full text-center mb-8">
+      <header className="w-full text-center mb-8 fade-in">
         <h1 className="text-4xl font-bold">the rider's experience</h1>
-        <p className="mt-2 text-lg">Race through breathtaking tracks in the ultimate championship!</p>
+        <p className="mt-2 text-lg">Race through breathtaking tracks and master your career mode to become a legend!</p>
       </header>
 
       <GameContent

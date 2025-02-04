@@ -8,20 +8,24 @@ Experience the rush of high-speed racing in a global championship that tests you
 
 2. **Prepare for the Race**
    - Familiarize yourself with your assigned crew role:
-     1. **Race Driver:** Take control of the vehicle and navigate the track.
-     2. **Strategist:** Plan the optimal racing line and manage nitro boosts.
+     1. **Race Driver:** Take control of the vehicle and push it to its limits on the track.
+     2. **Strategist:** Analyze the track and plan the optimal racing line and manage nitro boosts.
      3. **Mechanic:** Upgrade and maintain your car for peak performance.
      
 3. **Start the Race**
    - Click the **Start Race** button to begin your championship journey.
    - Experience a dynamic race where every decision counts.
 
-4. **In-Race Strategy**
+4. **Career Mode Progression**
+   - Begin your journey in the lowest racing tier. Win races to earn reputation points.
+   - Unlock new cars, tracks, and customization options as you advance through the tiers.
+
+5. **In-Race Strategy**
    - During the race, switch roles by clicking **Next Race** to focus on different aspects of the competition.
    - Adjust your strategy based on changing track conditions and weather.
 
-5. **Post-Race Analysis**
+6. **Post-Race Analysis**
    - After each race, review your performance, collect rewards, and upgrade your vehicle.
-   - Climb through different racing tiers and unlock new tracks and car customizations.
+   - Climb through different racing tiers and prepare for even tougher challenges.
 
 Enjoy the thrill of Speed Legends: Horizon Pursuit and race your way to glory!
